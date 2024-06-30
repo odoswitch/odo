@@ -1,0 +1,21 @@
+{
+    "name": "odoswitch/odo",
+    "description": "Framework VoIP",
+    "type": "project",
+    "require": {
+        "smarty/smarty": "^5.3",
+        "odoswitch/odoswitch": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Odoswitch\\Odo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David NGAMBA",
+            "email": "dng@afritelec.fr"
+        }
+    ]
+}
