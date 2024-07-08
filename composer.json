@@ -4,7 +4,12 @@
     "type": "project",
     "require": {
         "smarty/smarty": "^5.3",
-        "odoswitch/odoswitch": "^1.0"
+        "odoswitch/odoswitch": "^1.0",
+        "symfony/runtime": "^7.1",
+        "symfony/http-kernel": "^7.1",
+        "symfony/framework-bundle": "^7.1",
+        "symfony/console": "^7.1",
+        "symfony/yaml": "^7.1"
     },
     "license": "MIT",
     "autoload": {
@@ -17,5 +22,10 @@
             "name": "David NGAMBA",
             "email": "dng@afritelec.fr"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    }
 }
