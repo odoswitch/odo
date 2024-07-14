@@ -16,7 +16,7 @@ if (!\class_exists(Odoswitch_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerGSeT87a\Odoswitch_KernelDevDebugContainer([
     'container.build_hash' => 'GSeT87a',
-    'container.build_id' => '125ec6e4',
-    'container.build_time' => 1720970596,
+    'container.build_id' => 'caaf7a38',
+    'container.build_time' => 1720972074,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerGSeT87a');
