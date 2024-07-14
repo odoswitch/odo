@@ -1,5 +1,5 @@
 <?php
-// public/index.php
+
 
 use Odoswitch\Kernel;
 
