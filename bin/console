@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-
+//console
 use Odoswitch\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 
