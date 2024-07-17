@@ -1,6 +1,6 @@
 <?php
 
-namespace Odoswitch\Controller\admin;
+namespace Odoswitch\Controller\modules;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;

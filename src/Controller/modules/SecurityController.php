@@ -1,6 +1,6 @@
 <?php
 
-namespace Odoswitch\Controller;
+namespace Odoswitch\Controller\modules;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

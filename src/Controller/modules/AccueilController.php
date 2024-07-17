@@ -1,6 +1,6 @@
 <?php
 
-namespace Odoswitch\Controller;
+namespace Odoswitch\Controller\modules;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +11,7 @@ class AccueilController extends AbstractController
     #[Route('/', name: 'app_accueil')]
     public function index(): Response
     {
+        //dd($_SERVER["HTTP_HOST"]);
         return $this->render('accueil/index.html.twig', [
             'controller_name' => 'Application Gestion Mot de pass',
         ]);

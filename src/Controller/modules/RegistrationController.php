@@ -1,6 +1,6 @@
 <?php
 
-namespace Odoswitch\Controller;
+namespace Odoswitch\Controller\modules;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Odoswitch\Entity\User;

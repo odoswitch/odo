@@ -332,32 +332,32 @@
     <service id="Odoswitch\Entity" class="Odoswitch\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
-    <service id="Odoswitch\Controller\AccueilController" class="Odoswitch\Controller\AccueilController" public="true" autowire="true" autoconfigure="true">
+    <service id="Odoswitch\Controller\modules\AccueilController" class="Odoswitch\Controller\modules\AccueilController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\AccueilController"/>
+        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\AccueilController"/>
       </call>
     </service>
-    <service id="Odoswitch\Controller\RegistrationController" class="Odoswitch\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
+    <service id="Odoswitch\Controller\modules\Home" class="Odoswitch\Controller\modules\Home" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\RegistrationController"/>
+        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\Home"/>
       </call>
     </service>
-    <service id="Odoswitch\Controller\SecurityController" class="Odoswitch\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+    <service id="Odoswitch\Controller\modules\RegistrationController" class="Odoswitch\Controller\modules\RegistrationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\SecurityController"/>
+        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\RegistrationController"/>
       </call>
     </service>
-    <service id="Odoswitch\Controller\admin\Home" class="Odoswitch\Controller\admin\Home" public="true" autowire="true" autoconfigure="true">
+    <service id="Odoswitch\Controller\modules\SecurityController" class="Odoswitch\Controller\modules\SecurityController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\admin\Home"/>
+        <argument type="service" id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\SecurityController"/>
       </call>
     </service>
     <service id="Odoswitch\Form\RegistrationFormType" class="Odoswitch\Form\RegistrationFormType" autowire="true" autoconfigure="true">
@@ -397,7 +397,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.S3iAE3F"/>
+      <argument type="service" id=".service_locator.357dnSt"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2119,7 +2119,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.S3iAE3F"/>
+      <argument type="service" id=".service_locator.357dnSt"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5503,18 +5503,18 @@
       </call>
     </service>
     <service id="doctrine.migrations.storage.table_storage" class="Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\AccueilController" class="Odoswitch\Controller\AccueilController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\AccueilController" class="Odoswitch\Controller\AccueilController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.Odoswitch\Controller\AccueilController" class="Odoswitch\Controller\AccueilController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\RegistrationController" class="Odoswitch\Controller\RegistrationController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\RegistrationController" class="Odoswitch\Controller\RegistrationController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.Odoswitch\Controller\RegistrationController" class="Odoswitch\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\SecurityController" class="Odoswitch\Controller\SecurityController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\SecurityController" class="Odoswitch\Controller\SecurityController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.Odoswitch\Controller\SecurityController" class="Odoswitch\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\admin\Home" class="Odoswitch\Controller\admin\Home" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\admin\Home" class="Odoswitch\Controller\admin\Home" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.Odoswitch\Controller\admin\Home" class="Odoswitch\Controller\admin\Home" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\modules\AccueilController" class="Odoswitch\Controller\modules\AccueilController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\modules\AccueilController" class="Odoswitch\Controller\modules\AccueilController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.Odoswitch\Controller\modules\AccueilController" class="Odoswitch\Controller\modules\AccueilController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\modules\Home" class="Odoswitch\Controller\modules\Home" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\modules\Home" class="Odoswitch\Controller\modules\Home" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.Odoswitch\Controller\modules\Home" class="Odoswitch\Controller\modules\Home" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\modules\RegistrationController" class="Odoswitch\Controller\modules\RegistrationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\modules\RegistrationController" class="Odoswitch\Controller\modules\RegistrationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.Odoswitch\Controller\modules\RegistrationController" class="Odoswitch\Controller\modules\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.Odoswitch\Controller\modules\SecurityController" class="Odoswitch\Controller\modules\SecurityController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.Odoswitch\Controller\modules\SecurityController" class="Odoswitch\Controller\modules\SecurityController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.Odoswitch\Controller\modules\SecurityController" class="Odoswitch\Controller\modules\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.Odoswitch\Form\RegistrationFormType" class="Odoswitch\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.Odoswitch\Form\RegistrationFormType" class="Odoswitch\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.Odoswitch\Repository\UserRepository" class="Odoswitch\Repository\UserRepository" autowire="true" abstract="true"/>
@@ -6053,6 +6053,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.4wc4Ag1" method="withContext"/>
     </service>
+    <service id=".service_locator.lUAiwSo" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="client" type="service_closure" id=".debug.http_client"/>
+      </argument>
+    </service>
+    <service id=".service_locator.lUAiwSo.Odoswitch\Controller\modules\Home::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\Home::index()"/>
+      <argument>Odoswitch\Controller\modules\Home::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.lUAiwSo" method="withContext"/>
+    </service>
     <service id=".service_locator.g9BceMG" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6061,9 +6073,9 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.g9BceMG.Odoswitch\Controller\RegistrationController::register()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\RegistrationController::register()"/>
-      <argument>Odoswitch\Controller\RegistrationController::register()</argument>
+    <service id=".service_locator.g9BceMG.Odoswitch\Controller\modules\RegistrationController::register()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\RegistrationController::register()"/>
+      <argument>Odoswitch\Controller\modules\RegistrationController::register()</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9BceMG" method="withContext"/>
     </service>
@@ -6073,39 +6085,27 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.mXDaS5b.Odoswitch\Controller\SecurityController::login()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\SecurityController::login()"/>
-      <argument>Odoswitch\Controller\SecurityController::login()</argument>
+    <service id=".service_locator.mXDaS5b.Odoswitch\Controller\modules\SecurityController::login()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\SecurityController::login()"/>
+      <argument>Odoswitch\Controller\modules\SecurityController::login()</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mXDaS5b" method="withContext"/>
     </service>
-    <service id=".service_locator.lUAiwSo" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="client" type="service_closure" id=".debug.http_client"/>
-      </argument>
-    </service>
-    <service id=".service_locator.lUAiwSo.Odoswitch\Controller\admin\Home::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\admin\Home::index()"/>
-      <argument>Odoswitch\Controller\admin\Home::index()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.lUAiwSo" method="withContext"/>
-    </service>
-    <service id=".service_locator.S3iAE3F" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.357dnSt" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="Odoswitch\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="Odoswitch\Kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
-        <argument key="Odoswitch\Controller\RegistrationController::register" type="service_closure" id=".service_locator.g9BceMG.Odoswitch\Controller\RegistrationController::register()"/>
-        <argument key="Odoswitch\Controller\SecurityController::login" type="service_closure" id=".service_locator.mXDaS5b.Odoswitch\Controller\SecurityController::login()"/>
-        <argument key="Odoswitch\Controller\admin\Home::index" type="service_closure" id=".service_locator.lUAiwSo.Odoswitch\Controller\admin\Home::index()"/>
+        <argument key="Odoswitch\Controller\modules\Home::index" type="service_closure" id=".service_locator.lUAiwSo.Odoswitch\Controller\modules\Home::index()"/>
+        <argument key="Odoswitch\Controller\modules\RegistrationController::register" type="service_closure" id=".service_locator.g9BceMG.Odoswitch\Controller\modules\RegistrationController::register()"/>
+        <argument key="Odoswitch\Controller\modules\SecurityController::login" type="service_closure" id=".service_locator.mXDaS5b.Odoswitch\Controller\modules\SecurityController::login()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
-        <argument key="Odoswitch\Controller\RegistrationController:register" type="service_closure" id=".service_locator.g9BceMG.Odoswitch\Controller\RegistrationController::register()"/>
-        <argument key="Odoswitch\Controller\SecurityController:login" type="service_closure" id=".service_locator.mXDaS5b.Odoswitch\Controller\SecurityController::login()"/>
-        <argument key="Odoswitch\Controller\admin\Home:index" type="service_closure" id=".service_locator.lUAiwSo.Odoswitch\Controller\admin\Home::index()"/>
+        <argument key="Odoswitch\Controller\modules\Home:index" type="service_closure" id=".service_locator.lUAiwSo.Odoswitch\Controller\modules\Home::index()"/>
+        <argument key="Odoswitch\Controller\modules\RegistrationController:register" type="service_closure" id=".service_locator.g9BceMG.Odoswitch\Controller\modules\RegistrationController::register()"/>
+        <argument key="Odoswitch\Controller\modules\SecurityController:login" type="service_closure" id=".service_locator.mXDaS5b.Odoswitch\Controller\modules\SecurityController::login()"/>
       </argument>
     </service>
     <service id=".service_locator.mJTctrn" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6471,27 +6471,27 @@
         <argument key="parameter_bag" type="service_closure" id="parameter_bag" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\AccueilController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\AccueilController"/>
-      <argument>Odoswitch\Controller\AccueilController</argument>
+    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\AccueilController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\AccueilController"/>
+      <argument>Odoswitch\Controller\modules\AccueilController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.QaaoWjx" method="withContext"/>
     </service>
-    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\RegistrationController"/>
-      <argument>Odoswitch\Controller\RegistrationController</argument>
+    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\Home" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\Home"/>
+      <argument>Odoswitch\Controller\modules\Home</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.QaaoWjx" method="withContext"/>
     </service>
-    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\SecurityController"/>
-      <argument>Odoswitch\Controller\SecurityController</argument>
+    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\RegistrationController"/>
+      <argument>Odoswitch\Controller\modules\RegistrationController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.QaaoWjx" method="withContext"/>
     </service>
-    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\admin\Home" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="Odoswitch\Controller\admin\Home"/>
-      <argument>Odoswitch\Controller\admin\Home</argument>
+    <service id=".service_locator.QaaoWjx.Odoswitch\Controller\modules\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="Odoswitch\Controller\modules\SecurityController"/>
+      <argument>Odoswitch\Controller\modules\SecurityController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.QaaoWjx" method="withContext"/>
     </service>
@@ -6649,10 +6649,10 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>Odoswitch\Kernel</argument>
-          <argument>Odoswitch\Controller\AccueilController</argument>
-          <argument>Odoswitch\Controller\RegistrationController</argument>
-          <argument>Odoswitch\Controller\SecurityController</argument>
-          <argument>Odoswitch\Controller\admin\Home</argument>
+          <argument>Odoswitch\Controller\modules\AccueilController</argument>
+          <argument>Odoswitch\Controller\modules\Home</argument>
+          <argument>Odoswitch\Controller\modules\RegistrationController</argument>
+          <argument>Odoswitch\Controller\modules\SecurityController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>
@@ -7850,7 +7850,7 @@
     <service id="doctrine.migrations.metadata_storage" alias="doctrine.migrations.storage.table_storage"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.S3iAE3F"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.357dnSt"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
     <service id="Psr\Log\LoggerInterface $cacheLogger" alias="monolog.logger.cache"/>
@@ -7885,9 +7885,9 @@
     <service id="security.event_dispatcher.main" alias="debug.security.event_dispatcher.main"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.diNoEIK" alias=".service_locator.4wc4Ag1"/>
+    <service id=".service_locator.0M1temM" alias=".service_locator.lUAiwSo"/>
     <service id=".service_locator.po3y92J" alias=".service_locator.g9BceMG"/>
     <service id=".service_locator...2Ndi3" alias=".service_locator.mXDaS5b"/>
-    <service id=".service_locator.0M1temM" alias=".service_locator.lUAiwSo"/>
     <service id=".service_locator.S2zqm2M" alias=".service_locator.QaaoWjx"/>
   </services>
 </container>
