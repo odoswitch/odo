@@ -4,6 +4,9 @@
 
 {% block body %}
     <h1>Dashboard Systeme</h1>
+    <div class="mb-3 text-center font-bold text-white">
+            Vous etes connecté en tant que :" {{ app.user.userIdentifier }} ", <a href="{{ path('app_logout') }}">Deconnexion</a>
+        </div>
     {{ dump(data) }}
 
 
