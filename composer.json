@@ -34,7 +34,10 @@
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.2",
         "symfony/form": "7.1.*",
-        "symfony/validator": "7.1.*"
+        "symfony/validator": "7.1.*",
+        "symfony/ux-twig-component": "^2.10",
+        "symfony/webpack-encore-bundle": "*",
+        "symfony/translation": "7.0.*"
         
     },
     "license": "MIT",
