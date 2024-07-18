@@ -16,7 +16,7 @@ if (!\class_exists(Odoswitch_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerPxanErg\Odoswitch_KernelDevDebugContainer([
     'container.build_hash' => 'PxanErg',
-    'container.build_id' => '1dc8dc34',
-    'container.build_time' => 1721266016,
+    'container.build_id' => '757268bf',
+    'container.build_time' => 1721329684,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerPxanErg');

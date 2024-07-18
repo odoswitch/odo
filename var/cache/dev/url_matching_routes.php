@@ -19,6 +19,8 @@ return [
             [['_route' => 'app_accueil', '_controller' => 'Odoswitch\\Controller\\modules\\AccueilController::index'], null, null, null, false, false, null],
         ],
         '/admin/dash' => [[['_route' => 'app_dash', '_controller' => 'Odoswitch\\Controller\\modules\\Home::index'], null, null, null, false, false, null]],
+        '/app/login' => [[['_route' => 'app_login', '_controller' => 'Odoswitch\\Controller\\modules\\SecurityController::login'], null, null, null, false, false, null]],
+        '/app/logout' => [[['_route' => 'app_logout', '_controller' => 'Odoswitch\\Controller\\modules\\SecurityController::logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -42,10 +44,6 @@ return [
                 .')'
                 .'|/([^/]++)(*:211)'
                 .'|/register(*:228)'
-                .'|/log(?'
-                    .'|in(*:245)'
-                    .'|out(*:256)'
-                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -58,10 +56,8 @@ return [
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         211 => [[['_route' => 'odoswitch_home_root', '_controller' => 'Odoswitch\\Controller\\HomeController::root'], ['path'], null, null, false, true, null]],
-        228 => [[['_route' => 'app_register', '_controller' => 'Odoswitch\\Controller\\modules\\RegistrationController::register'], [], null, null, false, false, null]],
-        245 => [[['_route' => 'app_login', '_controller' => 'Odoswitch\\Controller\\modules\\SecurityController::login'], [], null, null, false, false, null]],
-        256 => [
-            [['_route' => 'app_logout', '_controller' => 'Odoswitch\\Controller\\modules\\SecurityController::logout'], [], null, null, false, false, null],
+        228 => [
+            [['_route' => 'app_register', '_controller' => 'Odoswitch\\Controller\\modules\\RegistrationController::register'], [], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
